@@ -17,11 +17,11 @@ describe('props', () => {
 
   it('should map array values', async () => {
     const x = await props([Promise.resolve(1), Promise.resolve(2)]);
-    expect(x).toEqual([1, 2]);
+    expect(x).toEqual({0: 1, 1: 2});
   });
 
   it('should accept a promise as the argument', async () => {
     const x = await props(Promise.resolve([1, 2]));
-    expect(x).toEqual([1, 2]);
+    expect(x).toEqual({0: 1, 1: 2});
   });
 });

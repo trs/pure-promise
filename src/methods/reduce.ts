@@ -1,7 +1,7 @@
 import {OrPromiseLike} from '../interfaces';
 
 /**
- * Sync reduce through iterable values
+ * Serially reduce through iterable values
  * @param items
  * @param method
  */
@@ -18,7 +18,7 @@ export default async function reduce<T, R>(
   values: OrPromiseLike<ArrayLike<T>>,
   iterator: (previousValue: R | T, currentValue: T, currentIndex: number) => R | Promise<R>,
   initialValue?: R | T
-) {
+): Promise<R | T> {
   try {
     const resolvedValues = await Promise.resolve(values);
 

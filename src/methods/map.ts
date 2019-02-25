@@ -1,11 +1,11 @@
 import { OrPromiseLike } from "../interfaces";
 
 /**
- * Async map through iterable items
+ * Concurrently map values in an array
  * @param items
  * @param method
  */
-export default async function map<T, R>(values: OrPromiseLike<ArrayLike<T>>, method: (value: T, index?: number) => R | Promise<R>) {
+export default async function map<T, R>(values: OrPromiseLike<ArrayLike<T>>, method: (value: T, index?: number) => R | Promise<R>): Promise<R[]> {
   try {
     const resolvedValues = await Promise.resolve(values);
     const result: (R | Promise<R>)[] = [];
