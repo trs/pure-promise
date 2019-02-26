@@ -1,4 +1,4 @@
-import { OrPromiseLike } from "../interfaces";
+import { OrPromiseLike } from "../meta";
 
 /**
  * Concurrently map values in an array

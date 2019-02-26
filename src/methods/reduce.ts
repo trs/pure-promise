@@ -1,4 +1,4 @@
-import {OrPromiseLike} from '../interfaces';
+import {OrPromiseLike} from '../meta';
 
 /**
  * Serially reduce through iterable values

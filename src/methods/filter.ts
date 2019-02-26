@@ -1,4 +1,4 @@
-import { OrPromiseLike } from "../interfaces";
+import { OrPromiseLike } from "../meta";
 
 /**
  * Concurrently filter values from an array

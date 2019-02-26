@@ -1,5 +1,5 @@
 import map from './map';
-import isPromise from './isPromise';
+import {isPromise} from '../meta';
 
 describe('map', () => {
   it('should return a promise', async () => {

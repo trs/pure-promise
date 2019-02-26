@@ -1,5 +1,5 @@
 import filter from './filter';
-import isPromise from './isPromise';
+import {isPromise} from '../meta';
 
 describe('filter', () => {
   it('should return a promise', async () => {

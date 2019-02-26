@@ -1,5 +1,5 @@
 import props from './props';
-import isPromise from './isPromise';
+import {isPromise} from '../meta';
 
 describe('props', () => {
   it('should return a promise', async () => {

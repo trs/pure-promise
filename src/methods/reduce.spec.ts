@@ -1,5 +1,5 @@
 import reduce from './reduce';
-import isPromise from './isPromise';
+import {isPromise} from '../meta';
 
 describe('reduce', () => {
   it('should return a promise', async () => {

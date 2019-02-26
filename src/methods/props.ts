@@ -1,4 +1,4 @@
-import {OrPromiseLike, Record} from '../interfaces';
+import {OrPromiseLike, Record} from '../meta';
 
 /**
  * Concurrently resolve values from a key/value pair into their key/values
