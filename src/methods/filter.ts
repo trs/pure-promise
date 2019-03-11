@@ -2,8 +2,6 @@ import { OrPromiseLike } from "../meta";
 
 /**
  * Concurrently filter values from an array
- * @param values
- * @param method
  */
 export default async function filter<T>(values: OrPromiseLike<ArrayLike<OrPromiseLike<T>>>, method: (value: T, index?: number) => boolean | Promise<boolean>): Promise<T[]> {
   try {

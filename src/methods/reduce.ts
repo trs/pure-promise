@@ -2,8 +2,6 @@ import {OrPromiseLike} from '../meta';
 
 /**
  * Serially reduce through iterable values
- * @param items
- * @param method
  */
 export default async function reduce<T>(
   values: OrPromiseLike<ArrayLike<OrPromiseLike<T>>>,
@@ -25,9 +23,8 @@ export default async function reduce<T, R>(
     let i = 0;
     let previousValue = initialValue || await Promise.resolve(resolvedValues[i++]);
     for (; i < resolvedValues.length; i++) {
-      const currentValue = resolvedValues[i];
-      previousValue = await Promise.resolve(currentValue)
-        .then((resolvedValue) => iterator(previousValue, resolvedValue, i));
+      const currentValue = await Promise.resolve(resolvedValues[i]);
+      previousValue = await iterator(previousValue, currentValue, i);
     }
 
     return previousValue;

@@ -38,6 +38,9 @@ export default function pipe<T1, T2, T3, T4, T5, T6, T7>(
   fifth: (a: T5) => OrPromiseLike<T6>,
   sixth: (a: T6) => OrPromiseLike<T7>
 ): Pipe<T1, T7>;
+/**
+ * Concurrently pipes the results of the previous function into the next
+ */
 export default function pipe<T>(...methods: PipeMethod<T>[]) {
   const piper = async (initialValue: T) => {
     let resultingValue = await Promise.resolve(initialValue);
