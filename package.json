@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "description": "Collection of functional utilities for working with native promises",
   "main": "dist/index",
+  "files": [
+    "dist/"
+  ],
   "scripts": {
     "test:once": "jest",
     "test": "npm run test:once -- --watchAll",
