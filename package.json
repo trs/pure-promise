@@ -1,13 +1,21 @@
 {
   "name": "pure-promise",
   "version": "1.0.0",
-  "description": "Collection of functional utilities for working with promises",
+  "description": "Collection of functional utilities for working with native promises",
   "main": "dist/index",
   "scripts": {
     "test:once": "jest",
     "test": "npm run test:once -- --watchAll"
   },
-  "keywords": [],
+  "keywords": [
+    "promise",
+    "functional",
+    "map",
+    "reduce",
+    "filter",
+    "pipe",
+    "pipeline"
+  ],
   "author": "Tyler Stewart",
   "license": "MIT",
   "jest": {
