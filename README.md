@@ -2,6 +2,8 @@
 
 > Collection of functional utilities for working with native promises
 
+![npm](https://img.shields.io/npm/v/pure-promise.svg)
+
 ## Install
 
 ```sh
@@ -10,7 +12,7 @@ $ npm install pure-promise
 $ yarn add pure-promise
 ```
 
-## API
+## Usage
 
 ### `reduce`
 
