@@ -27,8 +27,13 @@ describe('reduce', () => {
     expect(x).toEqual(6);
   });
 
-  it('should accept promies as the iterable', async () => {
+  it('should accept promises as the iterable', async () => {
     const x = await reduce(Promise.resolve([1, 2, 3]), (prev, value) => Promise.resolve(prev + value));
+    expect(x).toEqual(6);
+  });
+
+  it('should accept promises as items', async () => {
+    const x = await reduce([Promise.resolve(1), 2, 3], (prev, value) => Promise.resolve(prev + value));
     expect(x).toEqual(6);
   });
 });

@@ -15,8 +15,13 @@ describe('filter', () => {
     expect(x).toEqual([2, 4]);
   });
 
-  it('should accept promies as the iterable', async () => {
+  it('should accept promises as the iterable', async () => {
     const x = await filter(Promise.resolve([1, 2, 3, 4]), (value) => Promise.resolve(value % 2 === 0));
+    expect(x).toEqual([2, 4]);
+  });
+
+  it('should accept promises as items', async () => {
+    const x = await filter([Promise.resolve(1), 2, 3, 4], (value) => Promise.resolve(value % 2 === 0));
     expect(x).toEqual([2, 4]);
   });
 });

@@ -5,7 +5,7 @@ import { OrPromiseLike } from "../meta";
  * @param values
  * @param method
  */
-export default async function filter<T>(values: OrPromiseLike<ArrayLike<T>>, method: (value: T, index?: number) => boolean | Promise<boolean>): Promise<T[]> {
+export default async function filter<T>(values: OrPromiseLike<ArrayLike<OrPromiseLike<T>>>, method: (value: T, index?: number) => boolean | Promise<boolean>): Promise<T[]> {
   try {
     const resolvedValues = await Promise.resolve(values);
     const runningResults: Promise<void>[] = [];

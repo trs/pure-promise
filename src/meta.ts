@@ -1,5 +1,5 @@
 export type OrPromiseLike<T> = T | PromiseLike<T>;
-export interface Record<T> {[key: string]: T}
+export interface RecordLike<T> {[key: string]: T}
 
 export async function toPromise<T>(value: OrPromiseLike<T>): Promise<T>;
 export async function toPromise<T, R>(value: OrPromiseLike<T>, method?: (arg: T) => Promise<R>): Promise<R>;

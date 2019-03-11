@@ -15,8 +15,13 @@ describe('map', () => {
     expect(x).toEqual([2, 3, 4]);
   });
 
-  it('should accept promies as the iterable', async () => {
+  it('should accept promises as the iterable', async () => {
     const x = await map(Promise.resolve([1, 2, 3]), (value) => Promise.resolve(value + 1));
+    expect(x).toEqual([2, 3, 4]);
+  });
+
+  it('should accept promises as items', async () => {
+    const x = await map([Promise.resolve(1), 2, 3], (value) => Promise.resolve(value + 1));
     expect(x).toEqual([2, 3, 4]);
   });
 });
