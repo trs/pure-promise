@@ -1,7 +1,7 @@
 import {OrPromiseLike} from '../meta';
 
 /**
- * Serially reduce through iterable values
+ * Serially reduce through array values
  */
 export default async function reduce<T>(
   values: OrPromiseLike<ArrayLike<OrPromiseLike<T>>>,
