@@ -46,6 +46,22 @@ const plusOne = await map([
 console.log(plusOne); // [2, 3, 4]
 ```
 
+### `mapSeries`
+
+> Serially map through an array, or promise for an array
+
+```js
+import {mapSeries} from 'pure-promise';
+
+const plusOne = await mapSeries([
+  Promise.resolve(1),
+  2,
+  3
+], (value) => value + 1);
+
+console.log(plusOne); // [2, 3, 4]
+```
+
 ### `filter`
 
 > Concurrently filter values from an array, or promise for an array
