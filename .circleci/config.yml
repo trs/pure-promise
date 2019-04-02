@@ -20,7 +20,7 @@ jobs:
           root: .
           paths:
             - node_modules
-            - built
+            - dist
       - save_cache:
           key: *npm-cache-key
           paths:
