@@ -21,8 +21,8 @@
     "pipeline"
   ],
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/trs/pure-promise.git"
+    "type": "git",
+    "url": "https://github.com/trs/pure-promise.git"
   },
   "author": "Tyler Stewart",
   "license": "MIT",
