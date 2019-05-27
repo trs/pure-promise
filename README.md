@@ -2,7 +2,7 @@
 
 > Collection of functional utilities for working with native promises
 
-![npm](https://img.shields.io/npm/v/pure-promise.svg)
+[![npm](https://img.shields.io/npm/v/pure-promise.svg)](https://www.npmjs.com/package/pure-promise)
 
 ## Install
 
