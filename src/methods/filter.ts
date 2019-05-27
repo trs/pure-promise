@@ -3,7 +3,7 @@ import { OrPromiseLike } from "../meta";
 /**
  * Concurrently filter values from an array
  */
-export default async function filter<T>(values: OrPromiseLike<ArrayLike<OrPromiseLike<T>>>, method: (value: T, index?: number) => boolean | Promise<boolean>): Promise<T[]> {
+export async function filter<T>(values: OrPromiseLike<ArrayLike<OrPromiseLike<T>>>, method: (value: T, index?: number) => boolean | Promise<boolean>): Promise<T[]> {
   try {
     const resolvedValues = await Promise.resolve(values);
     const runningResults: Promise<void>[] = [];

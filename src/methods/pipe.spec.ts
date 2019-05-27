@@ -1,4 +1,4 @@
-import pipe from './pipe';
+import {pipe} from './pipe';
 import {isPromise} from '../meta';
 
 describe('pipe', () => {

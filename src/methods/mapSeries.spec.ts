@@ -1,4 +1,4 @@
-import mapSeries from './mapSeries';
+import {mapSeries} from './mapSeries';
 
 describe('mapSeries', () => {
   it('waits for previous value to resolve', async () => {

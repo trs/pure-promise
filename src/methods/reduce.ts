@@ -3,16 +3,16 @@ import {OrPromiseLike} from '../meta';
 /**
  * Serially reduce through array values
  */
-export default async function reduce<T>(
+export async function reduce<T>(
   values: OrPromiseLike<ArrayLike<OrPromiseLike<T>>>,
   iterator: (previousValue: T, currentValue: T, currentIndex: number) => T | Promise<T>
 ): Promise<T>;
-export default async function reduce<T, R>(
+export async function reduce<T, R>(
   values: OrPromiseLike<ArrayLike<OrPromiseLike<T>>>,
   iterator: (previousValue: R, currentValue: T, currentIndex: number) => R | Promise<R>,
   initialValue: R
 ): Promise<T>;
-export default async function reduce<T, R>(
+export async function reduce<T, R>(
   values: OrPromiseLike<ArrayLike<OrPromiseLike<T>>>,
   iterator: (previousValue: R | T, currentValue: T, currentIndex: number) => R | Promise<R>,
   initialValue?: R | T

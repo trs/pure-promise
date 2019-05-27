@@ -1,4 +1,4 @@
-import filter from './filter';
+import {filter} from './filter';
 import {isPromise} from '../meta';
 
 describe('filter', () => {

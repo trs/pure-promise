@@ -1,12 +1,12 @@
 import {OrPromiseLike, RecordLike} from '../meta';
 
 
-export default async function props<T>(items: OrPromiseLike<RecordLike<OrPromiseLike<T>>>): Promise<RecordLike<T>>;
-export default async function props<T>(items: OrPromiseLike<ArrayLike<OrPromiseLike<T>>>): Promise<RecordLike<T>>;
+export async function props<T>(items: OrPromiseLike<RecordLike<OrPromiseLike<T>>>): Promise<RecordLike<T>>;
+export async function props<T>(items: OrPromiseLike<ArrayLike<OrPromiseLike<T>>>): Promise<RecordLike<T>>;
 /**
  * Concurrently resolve values from a key/value pair into their key/values
  */
-export default async function props<T>(items: OrPromiseLike<RecordLike<OrPromiseLike<T>> | ArrayLike<OrPromiseLike<T>>>): Promise<RecordLike<T>> {
+export async function props<T>(items: OrPromiseLike<RecordLike<OrPromiseLike<T>> | ArrayLike<OrPromiseLike<T>>>): Promise<RecordLike<T>> {
   try {
     const resolvedItems = await Promise.resolve(items);
     const entries = Object.entries(resolvedItems);
